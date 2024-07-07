@@ -1,0 +1,157 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/88/6c/76/886c765f0c395293a3d8e44bfd62edd5.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.nav-links {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background: #7B7B7C;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-left: 320px;
+  margin-top : -310px;
+}
+
+.nav-links li{
+  list-style: none;
+  margin: 0 12px;
+}
+.nav-links li a{
+  position: relative;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.nav-links li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.nav-links li a:hover:before{
+  width: 100%;
+}
+.nav-links li.center a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li.upward a:before{
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+.nav-links li.upward a:hover:before{
+  bottom: 0px;
+  opacity: 1;
+}
+.nav-links li.forward a:before{
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.nav-links li.forward a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr; 
+    }
+}
+
+table, th, td {
+  border:1px solid black;
+  color: white;
+  text-align: center;
+  margin-left: 70px;
+  margin-top: 300px;
+  filter:drop-shadow(1px 1px 30px white);
+}
+
+div.biodata {
+  color: white;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 300px;
+  top: 100px;
+  display: wrap;
+  padding: 1px;
+  text-align: center;
+  font-variant: small-caps;
+  justify-content: center;
+}
+
+div.title {
+  position: absolute;
+  left: -30px;
+  margin-top: 100px;
+  display: wrap;
+  filter:drop-shadow(1px 1px 10px white);
+}
+
+div.formal {
+  border-radius: 50%;
+  filter:drop-shadow(1px 1px 10px white);
+  margin-right: 200px;
+  margin-left: -50px;
+  top: 250px;
+  overflow: visible;
+  position: relative;
+  left: 550px;
+  width: 720x;
+  height: 1000px;
+  justify-content: center;
+  padding: 1px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
